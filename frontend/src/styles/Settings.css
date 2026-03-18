@@ -4,6 +4,9 @@
   padding: 30px 20px;
   max-width: 900px;
   margin: 0 auto;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .settings-container,
@@ -203,11 +206,26 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .settings-page {
+    padding: 20px 12px;
+  }
+
+  .settings-section {
+    padding: 16px;
+  }
+
   .settings-actions {
     flex-direction: column;
+    padding: 16px;
   }
 
   .tech-stack {
     grid-template-columns: 1fr;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 }

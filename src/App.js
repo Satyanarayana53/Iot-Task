@@ -22,14 +22,6 @@ function App() {
         <Navbar onMenuClick={toggleSidebar} />
         <div className="main-container">
           <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          {sidebarOpen && (
-            <button
-              type="button"
-              className="sidebar-overlay"
-              aria-label="Close navigation"
-              onClick={() => setSidebarOpen(false)}
-            />
-          )}
           <main className="content">
             <Routes>
               <Route path="/" element={<Home />} />

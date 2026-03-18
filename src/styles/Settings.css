@@ -1,13 +1,12 @@
-/* About Page Styling */
+/* Settings & About Styling */
+.settings-page,
 .about-page {
   padding: 30px 20px;
   max-width: 900px;
   margin: 0 auto;
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
 }
 
+.settings-container,
 .about-container {
   background: white;
   border-radius: 12px;
@@ -15,15 +14,18 @@
   overflow: hidden;
 }
 
+.settings-section,
 .about-section {
   padding: 25px;
   border-bottom: 1px solid #e5e7eb;
 }
 
+.settings-section:last-child,
 .about-section:last-child {
   border-bottom: none;
 }
 
+.settings-section h2,
 .about-section h2 {
   margin: 0 0 20px 0;
   font-size: 20px;
@@ -31,6 +33,52 @@
   font-weight: 700;
 }
 
+.setting-item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-item label,
+.setting-item input,
+.setting-item select {
+  margin-bottom: 8px;
+}
+
+.setting-item label {
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 14px;
+}
+
+.setting-item input,
+.setting-item select {
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.setting-item input:focus,
+.setting-item select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.settings-actions {
+  display: flex;
+  gap: 15px;
+  padding: 25px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.settings-actions button {
+  flex: 1;
+}
+
+/* About Page */
 .about-header {
   text-align: center;
   margin-bottom: 30px;
@@ -71,13 +119,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.features-list li:before {
-  content: '✓';
-  color: var(--success-color);
-  font-weight: bold;
-  font-size: 18px;
 }
 
 .tech-stack {
@@ -162,24 +203,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .about-page {
-    padding: 20px 15px;
-  }
-
-  .about-section {
-    padding: 15px;
-  }
-
-  .about-header h1 {
-    font-size: 24px;
+  .settings-actions {
+    flex-direction: column;
   }
 
   .tech-stack {
     grid-template-columns: 1fr;
-  }
-
-  .info-row {
-    flex-direction: column;
-    gap: 5px;
   }
 }

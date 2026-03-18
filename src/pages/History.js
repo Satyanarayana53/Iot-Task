@@ -33,10 +33,6 @@ const History = () => {
     ? predictions 
     : predictions.filter(p => p.prediction === filter);
 
-  const averageConfidence = predictions.length
-    ? (predictions.reduce((sum, p) => sum + p.confidence, 0) / predictions.length) * 100
-    : 0;
-
   const getPredictionStats = () => {
     const stats = {};
     config.PREDICTION_CLASSES.forEach(cls => {
@@ -72,7 +68,7 @@ const History = () => {
             <div className="stat-item">
               <span className="stat-label">Avg Confidence</span>
               <span className="stat-value">
-                {averageConfidence.toFixed(1)}%
+                {(predictions.reduce((sum, p) => sum + p.confidence, 0) / predictions.length * 100).toFixed(1)}%
               </span>
             </div>
           </div>
@@ -88,7 +84,7 @@ const History = () => {
                     <div
                       className="bar"
                       style={{
-                        width: `${predictions.length ? (count / predictions.length) * 100 : 0}%`,
+                        width: `${(count / predictions.length) * 100}%`,
                         backgroundColor: [
                           config.THEME.primary,
                           config.THEME.secondary,

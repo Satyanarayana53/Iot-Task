@@ -5,11 +5,10 @@
   color: #1e293b;
   min-height: 100vh;
   width: 100%;
-  max-width: 1400px;
   box-sizing: border-box;
   overflow-x: hidden;
-  min-width: 0;
-  margin: 0 auto;
+  margin-left: 200px;
+  margin-top: 70px;
 }
 
 /* ============ HEADER ============ */
@@ -467,7 +466,7 @@
   }
 
   .readings-table table {
-    min-width: 480px;
+    min-width: 520px;
   }
 
   .info-grid {

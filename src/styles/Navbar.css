@@ -16,7 +16,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  gap: 16px;
 }
 
 .navbar-brand {
@@ -25,8 +24,6 @@
   gap: 15px;
   text-decoration: none;
   color: white;
-  min-width: 0;
-  flex: 1;
 }
 
 .navbar-logo {
@@ -40,62 +37,81 @@
 .navbar-title {
   text-decoration: none;
   color: white;
-  min-width: 0;
 }
 
 .navbar-title h1 {
   font-size: 24px;
   margin: 0;
   font-weight: 700;
-  line-height: 1.1;
-  overflow-wrap: anywhere;
 }
 
 .navbar-title p {
   font-size: 12px;
   margin: 0;
   opacity: 0.9;
-  overflow-wrap: anywhere;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .menu-toggle {
   display: none;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
+  background: none;
+  border: none;
   color: white;
   cursor: pointer;
-  font-size: 18px;
+  flex-direction: column;
+  gap: 6px;
 }
 
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: inline-flex;
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .navbar-links.active {
+    display: flex;
   }
 
   .navbar-container {
     padding: 15px 15px;
-  }
-
-  .navbar-brand {
-    gap: 10px;
-  }
-
-  .navbar-logo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .navbar-title h1 {
-    font-size: 18px;
-  }
-
-  .navbar-title p {
-    font-size: 11px;
   }
 }

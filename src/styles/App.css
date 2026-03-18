@@ -14,7 +14,6 @@
   --info-color: #3b82f6;          /* Blue */
   --light-color: #f3f4f6;         /* Light Gray */
   --dark-color: #111827;          /* Dark Gray */
-  --sidebar-width: 200px;
   --border-radius: 8px;
   --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
@@ -33,7 +32,6 @@ html, body {
 body {
   background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* Scrollbar Styling */
@@ -314,19 +312,12 @@ tbody tr:hover {
   display: flex;
   flex: 1;
   overflow: hidden;
-  min-width: 0;
 }
 
 .content {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  min-width: 0;
-  padding-left: var(--sidebar-width);
-}
-
-.sidebar-overlay {
-  display: none;
 }
 
 /* Light Theme (Default) */
@@ -652,34 +643,12 @@ tbody tr:hover {
     align-items: flex-start;
   }
 
-  .page-header h1 {
-    font-size: 24px;
-  }
-
   table {
     font-size: 12px;
   }
 
   th, td {
     padding: 8px;
-  }
-
-  .content {
-    padding-left: 0;
-  }
-
-  .sidebar-overlay {
-    display: block;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: none;
-    background: rgba(15, 23, 42, 0.45);
-    padding: 0;
-    margin: 0;
-    z-index: 104;
   }
 }
 
