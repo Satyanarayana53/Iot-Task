@@ -43,7 +43,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
         <div className="sidebar-footer">
           <p className="version">v1.0.0</p>
-          <p className="status">● Online</p>
+          <p className="status">Online</p>
         </div>
       </div>
     </aside>

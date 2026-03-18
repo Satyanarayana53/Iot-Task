@@ -23,11 +23,10 @@ const Navbar = ({ onMenuClick, isSidebarOpen }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo and College Name */}
         <div className="navbar-brand">
-          <img 
-            src={config.COLLEGE_LOGO} 
-            alt="College Logo" 
+          <img
+            src={config.COLLEGE_LOGO}
+            alt="College Logo"
             className="navbar-logo"
             onError={(e) => e.target.style.display = 'none'}
           />
@@ -37,8 +36,7 @@ const Navbar = ({ onMenuClick, isSidebarOpen }) => {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="menu-toggle"
           type="button"
           aria-label="Toggle navigation"
@@ -50,7 +48,6 @@ const Navbar = ({ onMenuClick, isSidebarOpen }) => {
           <span></span>
         </button>
 
-        {/* Navigation Links */}
         <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
           <Link to="/" className="nav-link" onClick={handleNavClick}><FaChartBar /> Dashboard</Link>
           <Link to="/prediction" className="nav-link" onClick={handleNavClick}><FaBrain /> Predictions</Link>

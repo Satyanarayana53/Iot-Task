@@ -341,7 +341,6 @@ tbody tr:hover {
     z-index: 140;
   }
 }
-
 /* Light Theme (Default) */
 :root {
   --theme-bg: #ffffff;
